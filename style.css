@@ -1,0 +1,96 @@
+/* ==========================================
+   MY NOTES APP - STYLESHEET
+   ========================================== */
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    min-height: 100vh;
+    padding: 25px;
+}
+
+/* Main Wrapper */
+.app-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Input Section */
+.input-area {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 35px;
+    margin: 25px 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.section-heading {
+    color: #2193b0;
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* Display Section */
+.display-area {
+    margin-top: 50px;
+}
+
+.display-area .section-heading {
+    color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Container - KRITERIA WAJIB: CSS GRID */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 35px;
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .input-area {
+        padding: 25px;
+    }
+
+    .section-heading {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .input-area {
+        padding: 20px;
+    }
+
+    .section-heading {
+        font-size: 20px;
+    }
+}
